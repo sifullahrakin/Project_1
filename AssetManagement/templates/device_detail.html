@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ device.name }} Detail</title>
+</head>
+<body>
+    <h1>{{ device.name }} Detail</h1>
+    <p>Condition: {{ device.condition }}</p>
+    <p>Checked Out: {{ device.checked_out }}</p>
+    <p>Checked In: {{ device.checked_in }}</p>
+    {% if device.employee %}
+        <p>Assigned to: {{ device.employee.name }}</p>
+    {% endif %}
+    <a href="{% url 'checkout_device' device.id %}">Check Out</a>
+    <a href="{% url 'return_device' device.id %}">Return</a>
+</body>
+</html>

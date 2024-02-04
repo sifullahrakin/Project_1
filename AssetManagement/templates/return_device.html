@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Device</title>
+</head>
+<body>
+    <h1>Return {{ device.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Return</button>
+    </form>
+</body>
+</html>
